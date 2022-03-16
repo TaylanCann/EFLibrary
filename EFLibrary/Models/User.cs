@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EFLibrary
+namespace EFLibrary.Models
 {
-    public class Category
+    public class User
     {
-        public int Id { get; set; }
-        public List<Book> Books { get; set; }
     }
 }
