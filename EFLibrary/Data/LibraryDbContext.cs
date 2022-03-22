@@ -19,7 +19,7 @@ namespace EFLibrary.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(connection => 
+            optionsBuilder.UseSqlServer(connection =>  
         }
     }
 }
