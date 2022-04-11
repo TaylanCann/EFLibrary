@@ -1,7 +1,7 @@
 ﻿using EFLibrary.Models;
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +19,7 @@ namespace EFLibrary.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(connection =>  
+            optionsBuilder.UseSqlServer("Data"); 
         }
     }
 }

@@ -12,6 +12,7 @@ namespace EFLibrary.Models
         public string Name { get; set; }
         public string Informations { get; set; }
         public string Birthday { get; set; }
+        public List<Book> Books { get; set; }
 
     }
 }
