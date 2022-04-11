@@ -17,9 +17,9 @@ namespace EFLibrary.Data
         public DbSet<User> Users { get; set; }
         public DbSet<UserBook> UserBooks { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Data"); 
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+          //  optionsBuilder.UseSqlServer("Data"); 
+        //}
     }
 }
