@@ -1,7 +1,7 @@
 ﻿using EFLibrary.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,9 +17,16 @@ namespace EFLibrary.Data
         public DbSet<User> Users { get; set; }
         public DbSet<UserBook> UserBooks { get; set; }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-          //  optionsBuilder.UseSqlServer("Data"); 
-        //}
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+          optionsBuilder.UseSqlServer("Data Source=TC19741518; Database=filmDb; uid=sa; pwd=Pa$$Word2! "); 
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Book>().Property(x => x.Name)
+                                       .IsRequired()
+                                       .HasMaxLength(250);
+        }
     }
 }
