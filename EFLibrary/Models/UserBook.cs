@@ -11,6 +11,8 @@ namespace EFLibrary.Models
         public int Id { get; set; }
         public User User { get; set; }
         public int UserId { get; set; }
-        public List<Book> Books { get; set; }
+        public Book Book { get; set; }
+        public int BookId { get; set; }
+
     }
 }

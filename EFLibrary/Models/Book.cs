@@ -18,6 +18,6 @@ namespace EFLibrary
         public DateTime Year { get; set; }
         public Author Author { get; set; }
         public int AuthorId { get; set; }
-        public List<Category> Categories { get; set; }
+        public List<BookCategory> BookCategories { get; set; }
     }
 }
