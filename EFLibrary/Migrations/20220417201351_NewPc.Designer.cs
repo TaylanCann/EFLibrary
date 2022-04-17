@@ -4,14 +4,16 @@ using EFLibrary.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EFLibrary.Migrations
 {
     [DbContext(typeof(LibraryDbContext))]
-    partial class LibraryDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220417201351_NewPc")]
+    partial class NewPc
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,6 +31,9 @@ namespace EFLibrary.Migrations
                     b.Property<int>("AuthorId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("CategoryId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(250)
@@ -43,6 +48,8 @@ namespace EFLibrary.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("AuthorId");
+
+                    b.HasIndex("CategoryId");
 
                     b.ToTable("Books");
                 });
@@ -153,6 +160,10 @@ namespace EFLibrary.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("EFLibrary.Category", null)
+                        .WithMany("Books")
+                        .HasForeignKey("CategoryId");
+
                     b.Navigation("Author");
                 });
 
@@ -197,6 +208,11 @@ namespace EFLibrary.Migrations
             modelBuilder.Entity("EFLibrary.Book", b =>
                 {
                     b.Navigation("BookCategories");
+                });
+
+            modelBuilder.Entity("EFLibrary.Category", b =>
+                {
+                    b.Navigation("Books");
                 });
 
             modelBuilder.Entity("EFLibrary.Models.Author", b =>

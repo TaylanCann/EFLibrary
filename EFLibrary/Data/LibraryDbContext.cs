@@ -28,7 +28,6 @@ namespace EFLibrary.Data
                                        .IsRequired()
                                        .HasMaxLength(250);
 
-            modelBuilder.Entity<Book>()
         }
     }
 }
