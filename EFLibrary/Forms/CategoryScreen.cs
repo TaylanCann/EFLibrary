@@ -36,6 +36,12 @@ namespace EFLibrary.Forms
             {
                 Name = txtCatName.Text
             };
+
+            context.Categories.Add(category);
+            int result = context.SaveChanges();
+            string message = result > 0 ? "Başarılı" : "Başarısız";
+            MessageBox.Show(message);
+            getCategories();
         }
     }
 }

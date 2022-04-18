@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EFLibrary.Data;
+using EFLibrary.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,34 @@ namespace EFLibrary.Forms
         public UserScreen()
         {
             InitializeComponent();
+        }
+
+        LibraryDbContext context = new LibraryDbContext();
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            User user = new User
+            {
+                Name = txtName.Text,
+                Surname = txtSurname.Text
+            };
+
+            context.Users.Add(user);
+            int result = context.SaveChanges();
+            string message = result > 0 ? "Başarılı" : "Başarısız";
+            MessageBox.Show(message);
+            getUsers();
+        }
+
+        void getUsers()
+        {
+            var users = context.Users.ToList();
+            dataGridView1.DataSource = users;
+        }
+
+        private void UserScreen_Load(object sender, EventArgs e)
+        {
+            getUsers();
         }
     }
 }

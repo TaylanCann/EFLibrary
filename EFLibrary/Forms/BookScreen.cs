@@ -16,5 +16,10 @@ namespace EFLibrary.Forms
         {
             InitializeComponent();
         }
+
+        private void BookScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
