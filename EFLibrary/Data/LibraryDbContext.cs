@@ -19,7 +19,7 @@ namespace EFLibrary.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-          optionsBuilder.UseSqlServer("Data Source=TC19741518; Database=filmDb; uid=sa; pwd=Pa$$Word2! "); 
+          optionsBuilder.UseSqlServer("Data Source=TC19741518; Database=libraryDb; uid=sa; pwd=Pa$$Word2! "); 
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
