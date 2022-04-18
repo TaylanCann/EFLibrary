@@ -54,8 +54,7 @@ namespace EFLibrary.Forms
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            UserScreen userScreen = new UserScreen();
-            userScreen.Show();
+           
         }
 
         private void btnAddCategory_Click(object sender, EventArgs e)

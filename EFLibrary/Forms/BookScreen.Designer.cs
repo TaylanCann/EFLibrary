@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.txtPageCount = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,18 +39,7 @@
             this.cbAuthor = new System.Windows.Forms.ComboBox();
             this.lbCategories = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(621, 40);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(385, 343);
-            this.dataGridView1.TabIndex = 15;
             // 
             // label3
             // 
@@ -151,13 +139,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1043, 465);
+            this.ClientSize = new System.Drawing.Size(621, 426);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lbCategories);
             this.Controls.Add(this.cbAuthor);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dateTimeBookYear);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPageCount);
             this.Controls.Add(this.label2);
@@ -167,15 +154,12 @@
             this.Name = "BookScreen";
             this.Text = "BookScreen";
             this.Load += new System.EventHandler(this.BookScreen_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPageCount;
         private System.Windows.Forms.Label label2;
