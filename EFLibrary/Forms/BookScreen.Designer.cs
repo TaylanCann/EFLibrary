@@ -30,27 +30,27 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtBirth = new System.Windows.Forms.TextBox();
+            this.txtPageCount = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtBookName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAddBook = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
+            this.dateTimeBookYear = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbAuthor = new System.Windows.Forms.ComboBox();
+            this.lbCategories = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(330, 43);
+            this.dataGridView1.Location = new System.Drawing.Point(621, 40);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(646, 343);
+            this.dataGridView1.Size = new System.Drawing.Size(385, 343);
             this.dataGridView1.TabIndex = 15;
             // 
             // label3
@@ -62,12 +62,12 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "Year";
             // 
-            // txtBirth
+            // txtPageCount
             // 
-            this.txtBirth.Location = new System.Drawing.Point(173, 89);
-            this.txtBirth.Name = "txtBirth";
-            this.txtBirth.Size = new System.Drawing.Size(125, 27);
-            this.txtBirth.TabIndex = 12;
+            this.txtPageCount.Location = new System.Drawing.Point(173, 89);
+            this.txtPageCount.Name = "txtPageCount";
+            this.txtPageCount.Size = new System.Drawing.Size(125, 27);
+            this.txtPageCount.TabIndex = 12;
             // 
             // label2
             // 
@@ -78,12 +78,12 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "Page Count";
             // 
-            // txtName
+            // txtBookName
             // 
-            this.txtName.Location = new System.Drawing.Point(173, 40);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(125, 27);
-            this.txtName.TabIndex = 10;
+            this.txtBookName.Location = new System.Drawing.Point(173, 40);
+            this.txtBookName.Name = "txtBookName";
+            this.txtBookName.Size = new System.Drawing.Size(125, 27);
+            this.txtBookName.TabIndex = 10;
             // 
             // label1
             // 
@@ -102,22 +102,14 @@
             this.btnAddBook.TabIndex = 8;
             this.btnAddBook.Text = "Add Book";
             this.btnAddBook.UseVisualStyleBackColor = true;
+            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
-            // dateTimePicker1
+            // dateTimeBookYear
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(171, 136);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(127, 27);
-            this.dateTimePicker1.TabIndex = 16;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(52, 230);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 20);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Categories";
+            this.dateTimeBookYear.Location = new System.Drawing.Point(171, 136);
+            this.dateTimeBookYear.Name = "dateTimeBookYear";
+            this.dateTimeBookYear.Size = new System.Drawing.Size(127, 27);
+            this.dateTimeBookYear.TabIndex = 16;
             // 
             // label5
             // 
@@ -128,37 +120,48 @@
             this.label5.TabIndex = 18;
             this.label5.Text = "Author";
             // 
-            // comboBox1
+            // cbAuthor
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(171, 177);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(127, 28);
-            this.comboBox1.TabIndex = 19;
+            this.cbAuthor.FormattingEnabled = true;
+            this.cbAuthor.Location = new System.Drawing.Point(171, 177);
+            this.cbAuthor.Name = "cbAuthor";
+            this.cbAuthor.Size = new System.Drawing.Size(127, 28);
+            this.cbAuthor.TabIndex = 19;
             // 
-            // comboBox2
+            // lbCategories
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(171, 222);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(127, 28);
-            this.comboBox2.TabIndex = 20;
+            this.lbCategories.FormattingEnabled = true;
+            this.lbCategories.ItemHeight = 20;
+            this.lbCategories.Location = new System.Drawing.Point(415, 40);
+            this.lbCategories.Name = "lbCategories";
+            this.lbCategories.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.lbCategories.Size = new System.Drawing.Size(156, 164);
+            this.lbCategories.TabIndex = 20;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(317, 43);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 20);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Categories";
             // 
             // BookScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1043, 465);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.lbCategories);
+            this.Controls.Add(this.cbAuthor);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.dateTimeBookYear);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtBirth);
+            this.Controls.Add(this.txtPageCount);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtBookName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAddBook);
             this.Name = "BookScreen";
@@ -174,15 +177,15 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtBirth;
+        private System.Windows.Forms.TextBox txtPageCount;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtBookName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAddBook;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker dateTimeBookYear;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbAuthor;
+        private System.Windows.Forms.ListBox lbCategories;
+        private System.Windows.Forms.Label label4;
     }
 }
