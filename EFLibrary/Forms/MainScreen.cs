@@ -48,12 +48,20 @@ namespace EFLibrary.Forms
 
         private void btnAddBook_Click(object sender, EventArgs e)
         {
-
+            BookScreen bookScreen = new BookScreen();
+            bookScreen.Show();
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
+            UserScreen userScreen = new UserScreen();
+            userScreen.Show();
+        }
 
+        private void btnAddCategory_Click(object sender, EventArgs e)
+        {
+            CategoryScreen categoryScreen = new CategoryScreen();
+            categoryScreen.Show();
         }
     }
 }

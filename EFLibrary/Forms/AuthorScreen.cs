@@ -26,8 +26,8 @@ namespace EFLibrary.Forms
             Author author = new Author
             {
                Name = txtName.Text,
-               Birthday = txtBirth.Text,
-               Informations = txtInfos.Text
+               Informations = txtInfos.Text,
+               Birthday = txtBirth.Text
             };
             
             context.Authors.Add(author);

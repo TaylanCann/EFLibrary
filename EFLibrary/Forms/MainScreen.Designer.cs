@@ -32,6 +32,7 @@
             this.btnAddAuthor = new System.Windows.Forms.Button();
             this.btnAddBook = new System.Windows.Forms.Button();
             this.btnAddUser = new System.Windows.Forms.Button();
+            this.btnAddCategory = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,12 +43,12 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 188);
+            this.dataGridView1.Size = new System.Drawing.Size(977, 336);
             this.dataGridView1.TabIndex = 0;
             // 
             // btnAddAuthor
             // 
-            this.btnAddAuthor.Location = new System.Drawing.Point(12, 215);
+            this.btnAddAuthor.Location = new System.Drawing.Point(224, 391);
             this.btnAddAuthor.Name = "btnAddAuthor";
             this.btnAddAuthor.Size = new System.Drawing.Size(127, 46);
             this.btnAddAuthor.TabIndex = 1;
@@ -57,7 +58,7 @@
             // 
             // btnAddBook
             // 
-            this.btnAddBook.Location = new System.Drawing.Point(12, 276);
+            this.btnAddBook.Location = new System.Drawing.Point(357, 391);
             this.btnAddBook.Name = "btnAddBook";
             this.btnAddBook.Size = new System.Drawing.Size(127, 46);
             this.btnAddBook.TabIndex = 2;
@@ -67,7 +68,7 @@
             // 
             // btnAddUser
             // 
-            this.btnAddUser.Location = new System.Drawing.Point(12, 340);
+            this.btnAddUser.Location = new System.Drawing.Point(490, 391);
             this.btnAddUser.Name = "btnAddUser";
             this.btnAddUser.Size = new System.Drawing.Size(127, 46);
             this.btnAddUser.TabIndex = 3;
@@ -75,11 +76,22 @@
             this.btnAddUser.UseVisualStyleBackColor = true;
             this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
+            // btnAddCategory
+            // 
+            this.btnAddCategory.Location = new System.Drawing.Point(623, 391);
+            this.btnAddCategory.Name = "btnAddCategory";
+            this.btnAddCategory.Size = new System.Drawing.Size(127, 46);
+            this.btnAddCategory.TabIndex = 4;
+            this.btnAddCategory.Text = "Add Category";
+            this.btnAddCategory.UseVisualStyleBackColor = true;
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1001, 480);
+            this.Controls.Add(this.btnAddCategory);
             this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.btnAddBook);
             this.Controls.Add(this.btnAddAuthor);
@@ -98,5 +110,6 @@
         private System.Windows.Forms.Button btnAddAuthor;
         private System.Windows.Forms.Button btnAddBook;
         private System.Windows.Forms.Button btnAddUser;
+        private System.Windows.Forms.Button btnAddCategory;
     }
 }
