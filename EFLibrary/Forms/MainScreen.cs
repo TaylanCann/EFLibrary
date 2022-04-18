@@ -28,15 +28,31 @@ namespace EFLibrary.Forms
                                                      .Include(b=>b.BookCategories)
                                                      .ThenInclude(b=>b.Category);
 
-            var data = allContext.Select(b => new 
+            var data = allContext.Select(b => new
             {
                 bookName = b.Name,
                 authorName = b.Author.Name,
-                category = b.BookCategories.Select(c => c.BookId==b.Id).ToList()
+                category = b.BookCategories.FirstOrDefault(c => c.BookId == b.Id).Category.Name
             });
 
             var list = data.ToList();
             dataGridView1.DataSource = list;
+
+        }
+
+        private void btnAddAuthor_Click(object sender, EventArgs e)
+        {
+            AuthorScreen authorScreen = new AuthorScreen();
+            authorScreen.Show();
+        }
+
+        private void btnAddBook_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
 
         }
     }
