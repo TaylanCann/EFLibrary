@@ -32,6 +32,7 @@
             this.btnAddAuthor = new System.Windows.Forms.Button();
             this.btnAddBook = new System.Windows.Forms.Button();
             this.btnAddCategory = new System.Windows.Forms.Button();
+            this.bntRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +49,7 @@
             // 
             // btnAddAuthor
             // 
-            this.btnAddAuthor.Location = new System.Drawing.Point(302, 380);
+            this.btnAddAuthor.Location = new System.Drawing.Point(227, 380);
             this.btnAddAuthor.Name = "btnAddAuthor";
             this.btnAddAuthor.Size = new System.Drawing.Size(127, 46);
             this.btnAddAuthor.TabIndex = 1;
@@ -58,7 +59,7 @@
             // 
             // btnAddBook
             // 
-            this.btnAddBook.Location = new System.Drawing.Point(435, 380);
+            this.btnAddBook.Location = new System.Drawing.Point(360, 380);
             this.btnAddBook.Name = "btnAddBook";
             this.btnAddBook.Size = new System.Drawing.Size(127, 46);
             this.btnAddBook.TabIndex = 2;
@@ -68,7 +69,7 @@
             // 
             // btnAddCategory
             // 
-            this.btnAddCategory.Location = new System.Drawing.Point(568, 380);
+            this.btnAddCategory.Location = new System.Drawing.Point(493, 380);
             this.btnAddCategory.Name = "btnAddCategory";
             this.btnAddCategory.Size = new System.Drawing.Size(127, 46);
             this.btnAddCategory.TabIndex = 4;
@@ -76,11 +77,22 @@
             this.btnAddCategory.UseVisualStyleBackColor = true;
             this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
+            // bntRefresh
+            // 
+            this.bntRefresh.Location = new System.Drawing.Point(626, 380);
+            this.bntRefresh.Name = "bntRefresh";
+            this.bntRefresh.Size = new System.Drawing.Size(127, 46);
+            this.bntRefresh.TabIndex = 5;
+            this.bntRefresh.Text = "Refresh";
+            this.bntRefresh.UseVisualStyleBackColor = true;
+            this.bntRefresh.Click += new System.EventHandler(this.bntRefresh_Click);
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 480);
+            this.Controls.Add(this.bntRefresh);
             this.Controls.Add(this.btnAddCategory);
             this.Controls.Add(this.btnAddBook);
             this.Controls.Add(this.btnAddAuthor);
@@ -99,5 +111,6 @@
         private System.Windows.Forms.Button btnAddAuthor;
         private System.Windows.Forms.Button btnAddBook;
         private System.Windows.Forms.Button btnAddCategory;
+        private System.Windows.Forms.Button bntRefresh;
     }
 }

@@ -47,5 +47,12 @@ namespace EFLibrary.Forms
         {
             getAuthors();
         }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int id = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+            AuthorDetailScreen authorDetailScreen = new AuthorDetailScreen(id);
+            authorDetailScreen.Show();
+        }
     }
 }

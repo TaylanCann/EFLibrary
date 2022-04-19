@@ -43,5 +43,12 @@ namespace EFLibrary.Forms
             MessageBox.Show(message);
             getCategories();
         }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int id = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+            CategoryDetailScreen categoryDetailScreen= new CategoryDetailScreen(id);
+            categoryDetailScreen.Show();
+        }
     }
 }

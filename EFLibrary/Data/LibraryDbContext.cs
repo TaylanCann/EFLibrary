@@ -18,7 +18,7 @@ namespace EFLibrary.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-          optionsBuilder.UseSqlServer("Data Source=TC19741518; Database=libraryDb; uid=sa; pwd=Pa$$Word2! "); 
+          optionsBuilder.UseSqlServer("Data Source=LAPTOP-9VG06RAO; Database=libraryDb; uid=sa; pwd=12345 "); 
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

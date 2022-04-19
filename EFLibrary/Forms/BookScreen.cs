@@ -72,7 +72,10 @@ namespace EFLibrary.Forms
                 CategoryId = s,
             }));
 
-            dbContext.SaveChanges();
+            int result = dbContext.SaveChanges();
+            string message = result > 0 ? "Başarılı" : "Başarısız";
+            MessageBox.Show(message);
+            this.Close();
         }
     }
 }

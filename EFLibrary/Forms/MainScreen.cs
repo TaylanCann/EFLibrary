@@ -18,10 +18,10 @@ namespace EFLibrary.Forms
         {
             InitializeComponent();
         }
+        LibraryDbContext libraryDbContext = new LibraryDbContext();
 
         private void MainScreen_Load(object sender, EventArgs e)
         {
-            LibraryDbContext libraryDbContext = new LibraryDbContext();
             libraryDbContext.Database.EnsureCreated();
 
             var allContext = libraryDbContext.Books.Include(b=>b.Author)
@@ -64,6 +64,24 @@ namespace EFLibrary.Forms
             int id = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
             BookDetailScreen bookDetailScreen = new BookDetailScreen(id);
             bookDetailScreen.Show();
+        }
+
+        private void bntRefresh_Click(object sender, EventArgs e)
+        {
+            var allContext = libraryDbContext.Books.Include(b => b.Author)
+                                                    .Include(b => b.BookCategories)
+                                                    .ThenInclude(b => b.Category);
+
+            var data = allContext.Select(b => new
+            {
+                Id = b.Id,
+                bookName = b.Name,
+                authorName = b.Author.Name,
+                category = b.BookCategories.FirstOrDefault(c => c.BookId == b.Id).Category.Name
+            });
+
+            var list = data.ToList();
+            dataGridView1.DataSource = list;
         }
     }
 }
