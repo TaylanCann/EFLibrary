@@ -30,6 +30,7 @@ namespace EFLibrary.Forms
 
             var data = allContext.Select(b => new
             {
+                Id = b.Id,
                 bookName = b.Name,
                 authorName = b.Author.Name,
                 category = b.BookCategories.FirstOrDefault(c => c.BookId == b.Id).Category.Name
@@ -52,15 +53,17 @@ namespace EFLibrary.Forms
             bookScreen.Show();
         }
 
-        private void btnAddUser_Click(object sender, EventArgs e)
-        {
-           
-        }
-
         private void btnAddCategory_Click(object sender, EventArgs e)
         {
             CategoryScreen categoryScreen = new CategoryScreen();
             categoryScreen.Show();
+        }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int id = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+            BookDetailScreen bookDetailScreen = new BookDetailScreen(id);
+            bookDetailScreen.Show();
         }
     }
 }

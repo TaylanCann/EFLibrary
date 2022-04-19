@@ -50,7 +50,7 @@ namespace EFLibrary.Forms
 
         private void btnAddBook_Click(object sender, EventArgs e)
         {
-            List<int> selectedCategories= new List<int>();
+            List<int> selectedCategories = new List<int>();
             foreach (dynamic item in lbCategories.SelectedItems)
             {
                 selectedCategories.Add(item.Id);

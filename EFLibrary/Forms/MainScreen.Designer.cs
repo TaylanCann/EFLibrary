@@ -31,7 +31,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAddAuthor = new System.Windows.Forms.Button();
             this.btnAddBook = new System.Windows.Forms.Button();
-            this.btnAddUser = new System.Windows.Forms.Button();
             this.btnAddCategory = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -45,10 +44,11 @@
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(977, 336);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
             // 
             // btnAddAuthor
             // 
-            this.btnAddAuthor.Location = new System.Drawing.Point(224, 391);
+            this.btnAddAuthor.Location = new System.Drawing.Point(302, 380);
             this.btnAddAuthor.Name = "btnAddAuthor";
             this.btnAddAuthor.Size = new System.Drawing.Size(127, 46);
             this.btnAddAuthor.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             // btnAddBook
             // 
-            this.btnAddBook.Location = new System.Drawing.Point(357, 391);
+            this.btnAddBook.Location = new System.Drawing.Point(435, 380);
             this.btnAddBook.Name = "btnAddBook";
             this.btnAddBook.Size = new System.Drawing.Size(127, 46);
             this.btnAddBook.TabIndex = 2;
@@ -66,19 +66,9 @@
             this.btnAddBook.UseVisualStyleBackColor = true;
             this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
             // 
-            // btnAddUser
-            // 
-            this.btnAddUser.Location = new System.Drawing.Point(490, 391);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(127, 46);
-            this.btnAddUser.TabIndex = 3;
-            this.btnAddUser.Text = "Add User";
-            this.btnAddUser.UseVisualStyleBackColor = true;
-            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
-            // 
             // btnAddCategory
             // 
-            this.btnAddCategory.Location = new System.Drawing.Point(623, 391);
+            this.btnAddCategory.Location = new System.Drawing.Point(568, 380);
             this.btnAddCategory.Name = "btnAddCategory";
             this.btnAddCategory.Size = new System.Drawing.Size(127, 46);
             this.btnAddCategory.TabIndex = 4;
@@ -92,7 +82,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1001, 480);
             this.Controls.Add(this.btnAddCategory);
-            this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.btnAddBook);
             this.Controls.Add(this.btnAddAuthor);
             this.Controls.Add(this.dataGridView1);
@@ -109,7 +98,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnAddAuthor;
         private System.Windows.Forms.Button btnAddBook;
-        private System.Windows.Forms.Button btnAddUser;
         private System.Windows.Forms.Button btnAddCategory;
     }
 }
